@@ -256,3 +256,39 @@ We will almost never use them in Go, because there is something much more flexib
 
 ## Slices
 
+A slice is similar to an array but it can grow when new elements are added. It is a pointer to the underlying array, this means if a slice is assigned to another variable both point to the same array not the copied array.
+
+```go
+a := [...]int{1,2,3,4,5}
+s1 := a[2:4]    // creates a slice with contents {3,4}
+s2 := a[:]      // creates a slice with all the contents
+s3 := s2[:]     // creates a slice from s2
+s4 := a[2:4:5]  // TBD
+```
+* For slices we can define a capacity and length
+```go
+s := make([]int, 20, 30)    // creates a new slice with capacity 20 and length 30
+fmt.println(len(s))
+fmt.println(cap(s))
+```
+* assigning to any index greater than length will throw `index out of range`
+* we can use `append` to add zero or move values to the end of the slice and returns the slice. If the slice is not big enough to store the new values then a new slice with a different underlying array will be returned.
+```go
+s0 := []int{1,2,3}        // create a new slice
+s1 := append(s0,4,5)      // appends multiple items to a slice
+s2 := append(s1,s0...)    // appends all elements of s0 to the end of s1
+```
+
+## Maps
+
+Type to store key value pairs. key & value should be of predefined type and is defined as `map[<key-type>]<value-type>`
+```go
+months := map[string]int{
+    "Jan": 31, "Feb": 28, "Mar": 31,
+    "Apr": 30, "May": 31, "Jun": 30,
+    "Jul": 30, "Aug": 31, "Sep": 30,
+    "Oct": 31, "Nov": 30, "Dec": 31,
+}
+
+m := make(map[string]int)
+```
