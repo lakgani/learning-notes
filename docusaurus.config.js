@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'My learning notes',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Built with Docusaurus',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -11,7 +11,7 @@ module.exports = {
   projectName: 'learning-notes', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Notes',
+      title: 'Ganesh\'s learning',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -21,11 +21,11 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Notes',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/lakgani/learning-notes',
           label: 'GitHub',
           position: 'right',
         },
@@ -56,7 +56,7 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/lakgani',
             },
           ],
         },
