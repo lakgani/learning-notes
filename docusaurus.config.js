@@ -2,7 +2,7 @@
 module.exports = {
   title: 'My learning notes',
   tagline: 'Built with Docusaurus',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://lakgani-learning.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
