@@ -47,7 +47,13 @@ var (
 |`rune` | alias for int32, UTF-8 encoded code point|
 |`complex64` `complex128` | 32 bit real and imaginary and 64 bit real and imaginary parts respectively. Written as **re+im*i*** where **re** is real part, **im** is imaginary part and ***i*** is literal|
 
-> `byte` can only represent 8-bit ASCII so `rune`should be used in such cases where UTF-8 is needed
+> `byte` can only represent 8-bit ASCII so `rune` should be used in such cases where UTF-8 is needed
+
+Types can be changed from one to another using type casting
+```go
+var a = 20
+var b float64 := float64(a)
+```
 
 ## Constants
 
